@@ -5147,6 +5147,266 @@
                 border-radius: 38px !important;
             }
         }
+
+        /* World-class night mode: midnight lagoon */
+        body.night-mode {
+            --night-ink: #f8fbff;
+            --night-muted-pro: #a9bdd5;
+            --night-panel-pro: rgba(10, 20, 37, 0.78);
+            --night-panel-strong: rgba(13, 27, 49, 0.92);
+            --night-line-pro: rgba(130, 185, 255, 0.16);
+            --night-cyan: #22d3ee;
+            --night-mint: #2dd4bf;
+            --night-violet: #8b5cf6;
+            --night-gold: #fbbf24;
+            --night-pink: #fb7185;
+            --night-shadow-pro: 0 34px 90px -44px rgba(0, 0, 0, 0.92);
+            color: var(--night-ink) !important;
+            background: #06101f !important;
+        }
+
+        body.night-mode::before {
+            background:
+                radial-gradient(circle at 14% 12%, rgba(255,255,255,0.9) 0 2px, transparent 3px),
+                radial-gradient(circle at 26% 22%, rgba(255,255,255,0.58) 0 1px, transparent 2px),
+                radial-gradient(circle at 74% 14%, rgba(255,255,255,0.75) 0 1px, transparent 2px),
+                radial-gradient(ellipse at 18% 78%, rgba(34,211,238,0.2) 0 15%, transparent 16%),
+                radial-gradient(ellipse at 86% 70%, rgba(139,92,246,0.22) 0 18%, transparent 19%),
+                radial-gradient(ellipse at 78% 16%, rgba(251,191,36,0.18) 0 11%, transparent 12%),
+                linear-gradient(180deg, #030712 0%, #07172b 42%, #082f3a 100%) !important;
+        }
+
+        body.night-mode::after {
+            opacity: 0.44 !important;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(125, 249, 255, 0.5) 0 1px, transparent 2px),
+                radial-gradient(circle at 70% 64%, rgba(255, 255, 255, 0.38) 0 1px, transparent 2px),
+                linear-gradient(115deg, transparent 0 46%, rgba(34,211,238,0.16) 47% 48%, transparent 49% 100%) !important;
+            background-size: 72px 72px, 96px 96px, 260px 260px !important;
+        }
+
+        body.night-mode #warm-bg {
+            opacity: 0.12 !important;
+            filter: saturate(0.6) hue-rotate(155deg);
+        }
+
+        body.night-mode .fun-bubble {
+            background: radial-gradient(circle, rgba(34,211,238,0.18), rgba(139,92,246,0.08)) !important;
+            box-shadow: 0 0 36px rgba(34,211,238,0.12);
+        }
+
+        body.night-mode > .sticky > div,
+        body.night-mode #bottom-nav-container > div > div {
+            background:
+                linear-gradient(180deg, rgba(13, 27, 49, 0.88), rgba(7, 18, 34, 0.76)) !important;
+            border: 1px solid var(--night-line-pro) !important;
+            box-shadow: 0 24px 70px -42px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+            backdrop-filter: blur(22px) saturate(140%) !important;
+        }
+
+        body.night-mode #bottom-nav-container a,
+        body.night-mode #bottom-nav-container span,
+        body.night-mode #bottom-nav-container i,
+        body.night-mode > .sticky span {
+            color: var(--night-muted-pro) !important;
+        }
+
+        body.night-mode #bottom-nav-container a:first-child,
+        body.night-mode #global-night-btn {
+            background:
+                linear-gradient(135deg, rgba(34,211,238,0.95), rgba(139,92,246,0.95)) !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.18), 0 20px 46px -20px rgba(34,211,238,0.8) !important;
+        }
+
+        body.night-mode #bottom-nav-container a:first-child span,
+        body.night-mode #global-night-btn * {
+            color: #fff !important;
+        }
+
+        body.night-mode .nb-home-shell::before,
+        body.night-mode .nb-dashboard::before,
+        body.night-mode .nb-kicker {
+            background:
+                linear-gradient(135deg, rgba(34,211,238,0.18), rgba(139,92,246,0.18)) !important;
+            border: 1px solid rgba(34,211,238,0.28) !important;
+            color: #a5f3fc !important;
+            box-shadow: 0 18px 48px -30px rgba(34,211,238,0.6) !important;
+        }
+
+        body.night-mode .nb-hero,
+        body.night-mode .nb-login > .text-center,
+        body.night-mode .nb-dashboard > .flex:first-child,
+        body.night-mode .nb-archipelago-section,
+        body.night-mode .nb-section-header,
+        body.night-mode .nb-tabs,
+        body.night-mode .nb-game-header,
+        body.night-mode #game-area,
+        body.night-mode #profile-modal > div,
+        body.night-mode #lang-modal > div,
+        body.night-mode #about-modal > div,
+        body.night-mode #privacy-modal > div,
+        body.night-mode #generic-modal > div {
+            background:
+                linear-gradient(180deg, rgba(13, 27, 49, 0.9), rgba(8, 18, 34, 0.78)),
+                radial-gradient(ellipse at 12% 8%, rgba(34,211,238,0.13), transparent 36%),
+                radial-gradient(ellipse at 84% 92%, rgba(139,92,246,0.13), transparent 42%) !important;
+            border: 1px solid var(--night-line-pro) !important;
+            color: var(--night-ink) !important;
+            box-shadow: var(--night-shadow-pro), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+        }
+
+        body.night-mode .nb-hero::before,
+        body.night-mode .nb-archipelago-section::before,
+        body.night-mode .nb-section-header::before {
+            opacity: 0.5;
+            background: rgba(34,211,238,0.18) !important;
+        }
+
+        body.night-mode h1,
+        body.night-mode h2,
+        body.night-mode h3,
+        body.night-mode h4,
+        body.night-mode .nb-hero-title,
+        body.night-mode .story-book-title {
+            color: var(--night-ink) !important;
+            text-shadow: 0 0 28px rgba(34,211,238,0.14) !important;
+        }
+
+        body.night-mode p,
+        body.night-mode .text-gray-400,
+        body.night-mode .text-gray-500,
+        body.night-mode .text-slate-400,
+        body.night-mode .text-slate-500,
+        body.night-mode .nb-hero-copy {
+            color: var(--night-muted-pro) !important;
+        }
+
+        body.night-mode .nb-map-island,
+        body.night-mode #main-container .nb-map-island {
+            background:
+                radial-gradient(ellipse at 50% 18%, rgba(255,255,255,0.14) 0 24%, transparent 25%),
+                radial-gradient(ellipse at 35% 48%, rgba(45,212,191,0.34) 0 31%, transparent 32%),
+                radial-gradient(ellipse at 68% 52%, rgba(251,191,36,0.24) 0 33%, transparent 34%),
+                linear-gradient(160deg, rgba(16,40,56,0.98) 0%, rgba(17,94,89,0.92) 48%, rgba(56,38,91,0.95) 100%) !important;
+            border: 1px solid rgba(34,211,238,0.18) !important;
+            box-shadow:
+                0 34px 0 -18px rgba(34,211,238,0.15),
+                0 58px 86px -44px rgba(0,0,0,0.95),
+                0 0 42px rgba(34,211,238,0.1),
+                inset 0 2px 0 rgba(255,255,255,0.1),
+                inset 0 -24px 36px rgba(0,0,0,0.22) !important;
+        }
+
+        body.night-mode #main-container .nb-map-island:nth-child(3n+1),
+        body.night-mode #main-container .nb-map-island:nth-child(3n+2) {
+            background:
+                radial-gradient(ellipse at 50% 18%, rgba(255,255,255,0.13) 0 24%, transparent 25%),
+                radial-gradient(ellipse at 42% 50%, rgba(34,211,238,0.26) 0 34%, transparent 35%),
+                radial-gradient(ellipse at 72% 55%, rgba(251,113,133,0.22) 0 34%, transparent 35%),
+                linear-gradient(155deg, rgba(8,31,48,0.98), rgba(17,94,89,0.9), rgba(52,35,88,0.96)) !important;
+        }
+
+        body.night-mode #main-container .nb-map-island h3,
+        body.night-mode #main-container .nb-map-island .text-slate-800,
+        body.night-mode #main-container .nb-map-island .dark\:text-white {
+            color: #f8fbff !important;
+            text-shadow: 0 2px 18px rgba(0,0,0,0.45) !important;
+        }
+
+        body.night-mode #main-container .nb-map-island > div[class*="size-20"],
+        body.night-mode #main-container .nb-map-island > div[class*="size-24"],
+        body.night-mode .nb-island-card .icon-box,
+        body.night-mode .nb-island-card [class*="size-"] {
+            background:
+                linear-gradient(145deg, rgba(22, 38, 66, 0.98), rgba(10, 20, 37, 0.9)) !important;
+            color: #67e8f9 !important;
+            border: 1px solid rgba(34,211,238,0.22) !important;
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.04),
+                0 22px 38px -26px rgba(0,0,0,0.9),
+                0 0 28px rgba(34,211,238,0.13),
+                inset 0 1px 0 rgba(255,255,255,0.08) !important;
+        }
+
+        body.night-mode .premium-card,
+        body.night-mode .nb-island-card,
+        body.night-mode .story-book-card,
+        body.night-mode .experiment-card,
+        body.night-mode .reader-image-container,
+        body.night-mode .candy-card,
+        body.night-mode #main-container .bg-white,
+        body.night-mode #main-container div.bg-white,
+        body.night-mode #main-container button.bg-white {
+            background:
+                linear-gradient(180deg, rgba(13, 27, 49, 0.92), rgba(7, 18, 34, 0.78)) !important;
+            color: var(--night-ink) !important;
+            border: 1px solid var(--night-line-pro) !important;
+            box-shadow: var(--night-shadow-pro), inset 0 1px 0 rgba(255,255,255,0.07) !important;
+        }
+
+        body.night-mode .nb-tabs button[class*="bg-white"],
+        body.night-mode .selected-lang,
+        body.night-mode button.bg-indigo-600,
+        body.night-mode #main-container .bg-indigo-600,
+        body.night-mode #main-container .bg-blue-500,
+        body.night-mode #main-container .bg-purple-600 {
+            background:
+                linear-gradient(135deg, rgba(34,211,238,0.95), rgba(139,92,246,0.96)) !important;
+            color: #ffffff !important;
+            border-color: rgba(255,255,255,0.16) !important;
+            box-shadow: 0 20px 46px -24px rgba(34,211,238,0.8) !important;
+        }
+
+        body.night-mode input,
+        body.night-mode textarea,
+        body.night-mode select,
+        body.night-mode #main-container input,
+        body.night-mode #profile-modal input,
+        body.night-mode #profile-modal select {
+            background: rgba(6, 16, 31, 0.82) !important;
+            border: 1px solid rgba(34,211,238,0.2) !important;
+            color: var(--night-ink) !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 3px rgba(34,211,238,0.04) !important;
+        }
+
+        body.night-mode input::placeholder,
+        body.night-mode textarea::placeholder {
+            color: rgba(169, 189, 213, 0.72) !important;
+        }
+
+        body.night-mode .glass-pill,
+        body.night-mode .nb-stat,
+        body.night-mode .bg-gray-50,
+        body.night-mode .bg-slate-50,
+        body.night-mode .bg-indigo-50,
+        body.night-mode .bg-blue-50,
+        body.night-mode .bg-purple-50,
+        body.night-mode .bg-emerald-50,
+        body.night-mode .bg-orange-50 {
+            background: rgba(10, 20, 37, 0.66) !important;
+            border-color: rgba(34,211,238,0.14) !important;
+            color: var(--night-ink) !important;
+        }
+
+        body.night-mode .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(6,16,31,0.8) !important;
+        }
+
+        body.night-mode .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, rgba(34,211,238,0.5), rgba(139,92,246,0.48)) !important;
+            border-radius: 999px;
+        }
+
+        @media (max-width: 640px) {
+            body.night-mode .nb-map-island,
+            body.night-mode #main-container .nb-map-island {
+                box-shadow:
+                    0 24px 0 -16px rgba(34,211,238,0.13),
+                    0 36px 56px -38px rgba(0,0,0,0.95),
+                    inset 0 1px 0 rgba(255,255,255,0.08) !important;
+            }
+        }
     </style>
 </head>
 
@@ -13700,13 +13960,16 @@
 
                     // Premium Library Header
                     const header = document.createElement('div');
-                    header.className = "p-8 space-y-6";
+                    header.className = "story-pro-header p-8 space-y-6";
                     header.innerHTML = `
                         <div class="flex items-center justify-between">
                             <button onclick="app.navigate('home')" class="size-14 rounded-2xl bg-white dark:bg-slate-800 shadow-soft flex items-center justify-center text-slate-400 hover:text-primary transition-all hover:scale-110 active:scale-90">
                                 <span class="material-symbols-outlined">arrow_back</span>
                             </button>
-                            <h1 class="text-4xl font-black text-slate-800 dark:text-white tracking-tight">${dict.stories}</h1>
+                            <div class="text-center">
+                                <div class="story-pro-kicker">${this.t({ ar: 'مكتبة عالمية', en: 'World Library', fr: 'Bibliothèque', es: 'Biblioteca', it: 'Biblioteca', de: 'Bibliothek' })}</div>
+                                <h1 class="text-4xl font-black text-slate-800 dark:text-white tracking-tight">${dict.stories}</h1>
+                            </div>
                             <div class="size-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
                                 <span class="material-symbols-outlined">auto_stories</span>
                             </div>
@@ -13727,14 +13990,14 @@
 
                     const storyGrid = document.createElement('div');
                     storyGrid.id = "story-grid";
-                    storyGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 pb-32';
+                    storyGrid.className = 'story-pro-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 pb-32';
 
                     const stories = this.storiesTab === 'all' ? DB_STORIES : DB_STORIES.filter(s => s.cat === this.storiesTab);
 
                     stories.forEach(s => {
                         const t = this.t(s);
                         const card = document.createElement('div');
-                        card.className = 'premium-card group cursor-pointer flex flex-col h-full bg-white dark:bg-slate-800/50 overflow-hidden';
+                        card.className = 'story-pro-card premium-card group cursor-pointer flex flex-col h-full bg-white dark:bg-slate-800/50 overflow-hidden';
                         card.onclick = () => { this.trackQuest('story'); this.launchStory(s.id); };
 
                         card.innerHTML = `
@@ -16373,10 +16636,12 @@
             // --- ADVANCED THEME & NAVIGATION CONTROLS ---
             toggleNightMode() {
                 this.isNightMode = !this.isNightMode;
+                localStorage.setItem('kids_night', this.isNightMode);
                 localStorage.setItem('kids_night_mode', this.isNightMode);
                 
                 // Apply theme to document root for Tailwind dark: classes
                 document.documentElement.classList.toggle('dark', this.isNightMode);
+                document.body.classList.toggle('night-mode', this.isNightMode);
                 
                 // Update Global Toggle Button
                 const nightBtn = document.getElementById('global-night-btn');
@@ -16447,13 +16712,4 @@
 
             // تسجيل الـ Service Worker للـ PWA
             // Service Worker registration (non-blocking)
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('./sw.js', { scope: './' })
-                    .then(reg => console.log('SW Registered!', reg))
-                    .catch(err => console.log('SW registration skipped:', err.message || err));
-            }
-        };
-    </script>
-</body>
-
-</html>
+            if ('serviceWorker' in navigator
